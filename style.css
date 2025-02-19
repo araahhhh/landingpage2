@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: #f7f7f2;
+  color: #1e1e24;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+}
+.logo {
+  color: #1e1e24;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.navmenu {
+  display: flex;
+}
+.navmenu a {
+  display: inline-block;
+  margin: 0 1.5rem;
+  color: #1e1e24;
+  font-weight: 500;
+  transition: all 0.6s;
+}
+.navmenu a:hover {
+  transform: translateY(-5px);
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 2rem 5rem 0 18rem;
+  gap: 1rem;
+}
+.home-img img {
+  width: 100%;
+  height: auto;
+}
+.home-text h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home-text h3 {
+  position: relative;
+  padding-left: 6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.home-text h3::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background-color: #1e1e24;
+  left: 0;
+  top: 1rem;
+}
+.home-text p {
+  margin-bottom: 2rem;
+}
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #f7f7f2;
+  border: 1px solid #1e1e24;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  background: #1e1e24;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background: #f7f7f2;
+  color: #1e1e24;
+  transform: translateY(5px);
+}
+.socials-icons {
+  position: absolute;
+  top: 40%;
+  padding: 0 8rem;
+}
+.socials-icons i {
+  display: block;
+  margin: 25px 0;
+  color: #1e1e24;
+  font-size: 1.5rem;
+  transition: all 0.6s;
+}
+.socials-icons i:hover {
+  transform: rotate3d(0, 0, 1, 90deg);
+}
+
+
+
+/*Portfolio Section*/
+.portfolio {
+  padding: 20px;
+}
+
+.skills {
+  margin-bottom: 40px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Space out the cards */
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #3D50B9;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  flex: 1 1 calc(33% - 20px); /* Responsive sizing for 3 cards per row */
+  margin: 10px; /* Space between cards */
+  transition: transform 0.2s;
+  position: relative; /* For hover text positioning */
+  min-width: 150px; /* Minimum width for cards */
+  max-width: fit-content;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  display: flex;
+  align-items: center; /* Align image and text */
+}
+
+.skill-image {
+  width: 50px; /* Small size for skill images */
+  height: 50px; /* Maintain aspect ratio */
+  border-radius: 5px;
+  margin-right: 10px; /* Space between image and text */
+}
+
+.card:hover {
+  background: linear-gradient(135deg, #00f, #ff69b4); /* Gradient from blue to pink */
+  transform: scale(1.05); /* Slightly enlarge the card */
+}
+
+
+.card:hover .skill-image {
+  filter: brightness(1.2); /* Slightly brighten the image on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+      flex: 1 1 calc(48% - 20px); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      flex: 1 1 100%; /* 1 card per row on very small screens */
+  }
+}
+
+/* PROJECTS SECTION */
+.projects {
+  padding: 2rem 5rem; /* Add padding to the projects section */
+}
+
+.projects h2 {
+  text-align: center; /* Center the section title */
+  margin-bottom: 2rem; /* Space below the title */
+}
+
+.projects-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 2 columns */
+  gap: 2rem; /* Space between cards */
+  margin: 20px; /* Margin around the container */
+}
+
+.card-project-image {
+  position: relative; /* Position relative for overlay */
+  overflow: hidden; /* Hide overflow for the blur effect */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.2s; /* Smooth scale effect on hover */
+
+}
+
+.card-project-image:hover {
+  transform: scale(1.05); /* Slightly enlarge card on hover */
+}
+
+.project-image {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  transition: filter 0.3s; /* Smooth transition for filter */
+}
+
+.card-project-image:hover .project-image {
+  filter: blur(2px); /* Blur image on hover */
+}
+
+.overlay {
+  position: absolute; /* Position overlay on top of the image */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; /* Use flexbox for centering text */
+  flex-direction: column; /* Stack text and button vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  opacity: 0; /* Hide overlay by default */
+  transition: opacity 0.3s; /* Smooth transition for opacity */
+}
+
+.card-project-image:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.overlay p {
+  color: #1e1e24; /* Text color */
+  font-weight: bold; /* Bold text */
+  font-size: 1.2rem; /* Font size */
+  margin-bottom: 1rem; /* Space below text */
+}
+
+.btn {
+  display: inline-block; /* Make the button an inline block */
+  padding: 0.5rem 1rem; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #1e1e24; /* Button background color */
+  color: #f7f7f2; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn:hover {
+  background-color: #007BFF; /* Change button color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projects-container {
+      grid-template-columns: 1fr; /* Stack cards in a single column on smaller screens */
+  }
+}
